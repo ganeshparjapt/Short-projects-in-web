@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome swichable form</h1>
+    <div class="switchs">
+        <button class="switchlink" onclick="openFomr(event,'singUp')">Sing Up</button>
+        <button class="switchlink" onclick="openForm(event,'logIn')">Log In</button>
+    </div>
+    <!-- //one pard and -->
+
+    <!-- switch content container start -->
+    <div class="switch-container">
+        <div id="SingUp" class="switchcontent">
+            <h1 class="title">Sign Up for Free</h1>
+        </div>
+        <div id="LogIn" class="switchcontent">
+            <h1 class="title"> Welcome Back</h1>
+        </div>
+    </div>
+    
 </body>
+<script src="scrpt.js"></script>
 </html>
