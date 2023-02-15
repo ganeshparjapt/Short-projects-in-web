@@ -4,14 +4,19 @@ function openForm(evt, formName) {
     evt.currentTarget.className += " active";
   }
 
-  let i,switchcontent, switchlinks;
+  var i, switchcontent, switchlinks;
 
-  switchcontent=document.getElementsByClassName("switchcontent");
-  for(i=0;i<switchcontent.length;i++){
-    switchcontent[i].style.display="none";
-
-    switchlinks=document.getElementsByClassName("switchlink");
-    for(i=0;i<switchlinks.length;i++){
-        switchlinks[i].className=switchlinks[i].className.repeat("active");
-    }
+  // Get all elements with class="switchcontent" and hide them using for loop
+  switchcontent = document.getElementsByClassName("switchcontent");
+  for (i = 0; i < switchcontent.length; i++) {
+    switchcontent[i].style.display = "none";
   }
+  
+  // Get all button elements with class="switchlink" and remove the class "active" for loop
+  switchlinks = document.getElementsByClassName("switchlink");
+  for (i = 0; i < switchlinks.length; i++) {
+    switchlinks[i].className = switchlinks[i].className.replace(" active", "");
+  }
+
+  // show default form
+document.getElementById("defaultOpen").click();
